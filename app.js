@@ -7,6 +7,7 @@ let bodyParser=require('body-parser');
 let cors=require('cors');
 let mongoUrl=process.env.mongoLiveUrl;
 let db;
+//database sample comment
 let col_name="dashboard";
 let swaggerUi=require('swagger-ui-express');
 const swaggerDocument=require('./swagger.json');
