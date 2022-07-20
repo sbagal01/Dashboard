@@ -1,0 +1,72 @@
+[{
+    
+    "name" : "Akash",
+    "city" : "Pune",
+    "phone" : "898798878",
+    "role" : "Admin",
+    "isActive" : true
+},
+{
+    
+    "name" : "Deepak",
+    "city" : "Delhi",
+    "phone" : "898798878",
+    "role" : "Admin",
+    "isActive" : false
+},
+{
+    
+    "name" : "Bhumika",
+    "city" : "Amsterdam",
+    "phone" : "898798878",
+    "role" : "User",
+    "isActive" : true
+},
+{
+    
+    "name" : "Saurabh",
+    "city" : "Pune",
+    "phone" : "7972452483",
+    "role" : "User",
+    "isActive" : true
+},
+{
+
+    "name" : "Saurabh",
+    "city" : "Pune",
+    "phone" : "7972452483",
+    "role" : "User",
+    "isActive" : false
+},
+{
+    
+    "name" : "Arushi",
+    "city" : "Venice",
+    "phone" : 8308004662,
+    "role" : "User",
+    "isActive" : false
+},
+{
+    
+    "name" : "Illuminati",
+    "role" : "User",
+    "city" : "Wakanda",
+    "phone" : "1111111111",
+    "isActive" : true
+},
+{
+
+    "name" : "Pranav",
+    "role" : "Admin",
+    "city" : "Daund",
+    "phone" : "3333333333",
+    "isActive" : true
+},
+{
+    
+    "name" : "Walter White",
+    "role" : "Lead",
+    "city" : "New mexico",
+    "phone" : "7972452483",
+    "isActive" : true
+}]
