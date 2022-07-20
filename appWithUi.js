@@ -1,6 +1,8 @@
 const express=require('express');
 let app=express();
 let mongo=require('mongodb');
+let dotenv=require('dotenv');
+dotenv.config();
 let port=process.env.PORT || 9700;
 let MongoClient=mongo.MongoClient;
 let bodyParser=require('body-parser');

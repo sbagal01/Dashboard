@@ -2,6 +2,8 @@ const express=require('express');
 let app=express();
 let mongo=require('mongodb');
 let port=process.env.PORT || 9700;
+let dotenv=require('dotenv');
+dotenv.config();
 let MongoClient=mongo.MongoClient;
 let bodyParser=require('body-parser');
 let cors=require('cors');
@@ -127,8 +129,10 @@ app.get('/user/:id',(req,res) => {
 
 
 MongoClient.connect(mongoUrl,(err,client)=>{
-    if(err) console.log("Error while connecting");
+    if(err) {console.log("Error while connecting");}
+
     db=client.db('test');
+    
     app.listen(port,()=>{
         console.log(`Server is running on port ${port}`);
     });
