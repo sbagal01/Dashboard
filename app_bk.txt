@@ -1,0 +1,69 @@
+
+{
+    "openapi":"3.0.0",
+    "info":{
+        "description": "This is the api for Swagger",
+        "version":"__version__"
+    },
+    "tags":[
+        {
+            "name":"PUBLIC ROUTE",
+            "description": "PUBLIC ROUTE"
+        }
+        ],
+    "paths":{
+        "/health":{
+            "summary": "Testing Health Check App",
+            "get":{
+                "description":"Testing health Care for App",
+                "tags":["PUBLIC ROUTE"],
+                "responses":{
+                    "200":{
+                        "description":"Health Check Pass"
+                    },
+                    "404":{
+                           "description": "Health Check Fail" 
+                    }
+                }
+            }
+        },
+        "/users":{
+            "summary":"Testing User",
+            "get":{
+                "description":"Get Users",
+                "tags":["PUBLIC ROUTE"],
+                "parameters":[
+                    {
+                        "in":"query",
+                        "name":"role",
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description": "Choose Role as admin or user"
+                    },
+                    {
+                        "in":"query",
+                        "name":"city",
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description": "Enter User city"
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Health Check Pass"
+                    },
+                    "404":{
+                        "description":"Health Check Fail"
+                    }
+                }
+            }
+        }
+    }
+    
+
+}
+
+// 62cd65530fdf9680b627b27a
+// 62cd6c201ae6d1803a5655f6

@@ -1,0 +1,189 @@
+
+{
+    "openapi":"3.0.0",
+    "info":{
+        "description": "This is the api for Swagger",
+        "version":"__version__"
+    },
+    "tags":[
+        {
+            "name":"PUBLIC ROUTE",
+            "description": "PUBLIC ROUTE"
+        }
+        ],
+    "paths":{
+        "/health":{
+            "summary": "Testing Health Check App",
+            "get":{
+                "description":"Testing health Care for App",
+                "tags":["PUBLIC ROUTE"],
+                "responses":{
+                    "200":{
+                        "description":"Health Check Pass"
+                    },
+                    "404":{
+                           "description": "Health Check Fail" 
+                    }
+                }
+            }
+        },
+        "/getUser":{
+            "summary":"Testing User",
+            "get":{
+                "description":"Get Users",
+                "tags":["PUBLIC ROUTE"],
+                "parameters":[
+                    {
+                        "in":"query",
+                        "name":"role",
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description": "Choose Role as admin or user"
+                    },
+                    {
+                        "in":"query",
+                        "name":"city",
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description": "Enter User city"
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Health Check Pass"
+                    },
+                    "404":{
+                        "description":"Health Check Fail"
+                    }
+                }
+            }
+        },
+        "/user/{id}":{
+            "summary":"Testing Particular User",
+            "get":{
+                "description":"Get particular Users",
+                "tags":["PUBLIC ROUTE"],
+                "parameters":[
+                    {
+                        "in":"path",
+                        "name":"id",
+                        "required":true,
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description": "Choose particular person"
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Health Check Pass"
+                    },
+                    "404":{
+                        "description":"Health Check Fail"
+                    }
+                }
+            }
+        },
+        "/addUser":{
+            "summary":"Add new User",
+            "post":{
+            "tags":["PUBLIC ROUTE"],
+            "requestBody":{
+                "required": true,
+                "content":{
+                    "application/json":{
+                        "schema":{
+                            "type":"object",
+                            "id":"string"
+                        },
+                        "example":{
+                            "name":"Arushi",
+                            "city":"Venice",
+                            "phone":353456456,
+                            "role":"User",
+                            "isActive":true
+                        }
+                    }
+                }
+            },
+        
+            "responses":{
+                "200":{
+                    "description":"Health Check Pass"
+                },
+                "404":{
+                    "description":"Health Check Fail"
+                }
+            }
+        }
+        },
+        "/updateUser":{
+            "summary":"Update User",
+            "put":{
+                "description": "Update particular Users",
+                "tags":["PUBLIC ROUTE"],
+                "requestBody":{
+                    "require":true,
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type": "object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "_id": "62cce31b3cf1c1b109d01608",
+                                "name": "Arushi",
+                                "city": "Venice",
+                                "phone":"5658839123",
+                                "role": "User",
+                                "isActive": true
+                            }
+                        }
+                    }
+                },"responses":{
+                    "200":{
+                        "description":"Health Check Pass"
+                    },
+                    "404":{
+                        "description":"Health Check Fail"
+                    }
+                }
+            }
+
+        },
+        "/deleteUser":{
+            "summary":"Delete User",
+            "delete":{
+            "description": "Delete Users",
+            "tags":["PUBLIC ROUTE"],
+            "requestBody":{
+                "require":true,
+                "content":{
+                    "application/json":{
+                        "schema":{
+                            "type": "Object",
+                            "id":"string"
+                        },
+                        "example":{
+                            "_id":"62cce31b3cf1c1b109d01608"
+                        }
+                    }
+                }
+            },"responses":{
+                "200":{
+                    "description":"Health Check Pass"
+                },
+                "404":{
+                    "description":"Health Check Fail"
+                }
+            }
+        }
+    }
+
+        
+}
+    
+
+}
