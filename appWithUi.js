@@ -5,7 +5,7 @@ let port=process.env.PORT || 9700;
 let MongoClient=mongo.MongoClient;
 let bodyParser=require('body-parser');
 let cors=require('cors');
-let mongoUrl="mongodb://localhost:27017";
+let mongoUrl=process.env.mongoLiveUrl;
 let db;
 let col_name="dashboard";
 let swaggerUi=require('swagger-ui-express');
