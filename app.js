@@ -22,7 +22,9 @@ app.use(`/api-doc`,swaggerUi.serve,swaggerUi.setup(swaggerDocument));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(cors());
-
+app.get('/',(req,res)=>{
+    res.status(200).send('Hi');
+})
 app.get('/health',(req,res)=>{
     res.status(200).send('Health check');
 });
