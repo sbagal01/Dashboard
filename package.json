@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node appWithUi.js",
+    "start": "node app.js",
     "dev": "nodemon app.js",
     "ui": "nodemon appWithUi.js",
     "test": "mocha --timeout 10000"
